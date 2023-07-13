@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const {Schema} = mongoose;
 const userScema = new Schema({
     name:{
         type:String,
@@ -7,8 +7,7 @@ const userScema = new Schema({
     },
     email:{
         type:String,
-        require:true,
-        unique:true
+        require:true
     },
     password:{
         type:String,
