@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require('../models/User')
 const {body, validationResult} = require('express-validator')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 // A user is created here. No login required. POST 'api/auth/createuser'
 router.post('/createuser',[ // here all the validations should be added
     body('name','Please enter a name of minimum 3 characters').isLength({min:3}),
@@ -27,7 +28,14 @@ router.post('/createuser',[ // here all the validations should be added
             email: req.body.email,
             password: secretPass
         })
-        res.json(user)
+        const data = {
+            user:{
+                id: user.id
+            }
+        }
+        console.log(process.env.REACT_APP_SECRET_KEY)
+        const authtoken = jwt.sign(data, process.env.REACT_APP_SECRET_KEY)
+        res.json({authtoken})
     }catch(error){
         res.status(500).json({error: error.message})
     }
