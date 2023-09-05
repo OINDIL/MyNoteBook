@@ -82,10 +82,11 @@ body('password','Password cannot be blank').exists()
 
 router.post('/getuser',fetchuser, async (req,res)=>{
     try {
-        userId = await req.user.id
+        userId = req.user.id
         const user = await User.findById(userId).select("-password")
         res.send(user)
     }catch(error){
+        console.log(error)
         res.status(500).json({error: "Internal server Error"})
     }
 })
