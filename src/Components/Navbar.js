@@ -12,8 +12,8 @@ const Navbar = (props) => {
           <Link className={`text-${props.mode === 'dark' ? 'light' : 'dark'} navbar-brand`} to='/'><span style={{ color: 'rgb(138, 134, 15)' }}>My</span>Notes.</Link>
           {/* here is the dropdown button */}
           <div className="dropdown">
-            <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {location.pathname === '/'?'Home':'About'}
+            <button className={`btn dropdown-toggle text-${props.mode === 'dark' ? 'light' : 'dark'}`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {location.pathname === '/' ? 'Home' : 'About' }
             </button>
             <ul className="dropdown-menu">
               <li><Link className="dropdown-item" to="/">Home</Link></li>

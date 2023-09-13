@@ -29,11 +29,13 @@ function App() {
       setMode("dark")
       document.body.style.backgroundColor = 'rgb(32, 33, 36)'
       document.body.style.color = 'white'
+      showAlert("Dark Mode has been enabled","success")
     }
     else {
       setMode('light')
       document.body.style.backgroundColor = 'white'
       document.body.style.color = 'black'
+      showAlert("Dark Mode has been disabled","success") 
     }
   }
   return (
