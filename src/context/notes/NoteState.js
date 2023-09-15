@@ -6,7 +6,7 @@ const NoteState = (props) => {
     const notesList =
         [
             {
-                "_id": "64f9dce04479237b4be84399",
+                "_id": "64f9dce04479237b4be843991",
                 "user": "64f7505957dc32657bfc29ac",
                 "title": "hello",
                 "description": "This note has been updated after the first completion of the api",
@@ -15,7 +15,7 @@ const NoteState = (props) => {
                 "__v": 0
             },
             {
-                "_id": "64f9dce04479237b4be84399",
+                "_id": "64f9dce04479237b4be843992",
                 "user": "64f7505957dc32657bfc29ac",
                 "title": "hello",
                 "description": "This note has been updated after the first completion of the api",
@@ -24,7 +24,7 @@ const NoteState = (props) => {
                 "__v": 0
             },
             {
-                "_id": "64f9dce04479237b4be84399",
+                "_id": "64f9dce04479237b4be843993",
                 "user": "64f7505957dc32657bfc29ac",
                 "title": "hello",
                 "description": "This note has been updated after the first completion of the api",
@@ -33,7 +33,7 @@ const NoteState = (props) => {
                 "__v": 0
             },
             {
-                "_id": "64f9dce04479237b4be84399",
+                "_id": "64f9dce04479237b4be843994",
                 "user": "64f7505957dc32657bfc29ac",
                 "title": "hello",
                 "description": "This note has been updated after the first completion of the api",
@@ -42,7 +42,7 @@ const NoteState = (props) => {
                 "__v": 0
             },
             {
-                "_id": "64f9dce04479237b4be84399",
+                "_id": "64f9dce04479237b4be843995",
                 "user": "64f7505957dc32657bfc29ac",
                 "title": "hello",
                 "description": "This note has been updated after the first completion of the api",
@@ -51,7 +51,7 @@ const NoteState = (props) => {
                 "__v": 0
             },
             {
-                "_id": "64f9dce04479237b4be84399",
+                "_id": "64f9dce04479237b4be843996",
                 "user": "64f7505957dc32657bfc29ac",
                 "title": "hello",
                 "description": "This note has been updated after the first completion of the api",
@@ -61,9 +61,8 @@ const NoteState = (props) => {
             }
         ]
     const [notes, setNotes] = useState(notesList)
-        console.log(notes._id)
     return (
-        <NoteContext.Provider key={notes._id} value={{ notes, setNotes }}>
+        <NoteContext.Provider value={{ notes, setNotes }}>
             {props.children}
         </NoteContext.Provider>
     )
