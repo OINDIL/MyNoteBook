@@ -5,12 +5,11 @@ const Navbar = () => {
   const DarkMode = useContext(darkContext)
   const {mode,togglefunc} = DarkMode
   let location = useLocation();
-  React.useEffect(() => { // not working till now
-    console.log(location.pathname)
+  React.useEffect(() => { 
   }, [location]);
   return (
     <>
-      <nav className={`navbar navbar-expand-lg fixed-top text-${mode === 'dark' ? 'light' : 'dark'} bg-${mode}`}>
+      <nav className={`navbar navbar-expand-lg text-${mode === 'dark' ? 'light' : 'dark'} bg-${mode}`}>
         <div className="container-fluid">
           <Link className={`text-${mode === 'dark' ? 'light' : 'dark'} navbar-brand`} to='/'><span style={{ color: 'rgb(138, 134, 15)' }}>My</span>Notes.</Link>
           {/* here is the dropdown button */}
