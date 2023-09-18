@@ -12,9 +12,8 @@ const {title,desc,tag} = props
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{desc}</p>
-                    <Link to="/" className="btn btn-primary mx-2"><i className="ri-file-add-line"></i></Link>
                     <Link to="/" className="btn btn-primary mx-2"><i className="ri-edit-box-line"></i></Link>
-                    <Link to="/" className="btn btn-primary mx-2"><i className="ri-delete-bin-line"></i></Link>
+                    <Link to="/" className="btn btn-danger mx-2"><i className="ri-delete-bin-line"></i></Link>
                 </div>
             </div>
         </>

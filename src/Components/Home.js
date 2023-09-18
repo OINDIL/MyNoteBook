@@ -11,20 +11,22 @@ const Home = (props) => {
                     style={{
                         backgroundColor: 'rgb(214, 206, 54)',
                         borderRadius: '40%',
-                        position: 'absolute',
-                        bottom: 0,
-                        right: 0,
-
-                        // zIndex:0
+                        position: 'fixed',
+                        bottom:'1.2rem',
+                        right: '1rem',
+                        zIndex:1,
                         margin: '20px'
                     }}><i className="ri-add-circle-line" style={{ fontSize: '2rem' }}></i></button>
             </div>
+            <div className="container">
+
             <div className='row'>
                 {notes.map((element) => {
                     return <div className="col-md-3" key={element._id}>
                         <NotesRender title={element.title} desc={element.description} tag={element.tag}/>
                     </div>
                 })}
+            </div>
             </div>
         </>
     )

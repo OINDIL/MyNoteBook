@@ -2,7 +2,11 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>This is about the app and the creator of the app</div>
+    <>
+    <div className="container">
+      <div>This is about the app and the creator of the app</div>
+    </div>
+    </>
   )
 }
 
